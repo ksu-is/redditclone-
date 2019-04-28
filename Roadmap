@@ -6,20 +6,18 @@
 
 [x] Set up virtual environment 
 
-[x] Set up Database with mSQL and Flask
+[x] Set up Database with mySQL and Flask
 
 [x] Test run the server to see if code successfully applied and transferred. 
 
-[ ] Create ''Dark-Mode'' theme
+[x] Create ''Dark-Mode'' theme
 
-[ ] Arrange log-in steps in desired manor
+[x] Arrange log-in steps in desired manner
 
-[ ] Offer developer option during account creation 
+[x] Create graphics and images for the website in Photoshop
 
-[ ] Create graphics and images for the website in Photoshop
+[x] Create home page for communities/games offered 
 
-[ ] Create page for communities/games offered 
+[x] Flask render_template to new page
 
-[ ] Offer ''subcribe'' feature
-
-[ ] Test code and run 
+[x] Test code and run 
