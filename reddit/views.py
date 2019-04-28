@@ -12,19 +12,13 @@ def load_user(id):
 
 @app.route('/', methods=['GET'])
 def home():
-    if request.method == 'GET':
-        top_posts = PostDB.query.order_by(desc(PostDB.num_likes)).limit(50).all()
-        if top_posts is None:
-            return render_template('header.html')
-        for x in top_posts:
-            print vars(x)
-        return render_template('header.html', posts=top_posts, TagDB=TagDB, PostTagDB=PostTagDB, front=True)
-
+    return render_template('header.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
         return render_template('register.html')
+    # logic to sign in or register account
     if request.method == 'POST':
         email = request.form.get('email')
         username = request.form.get('username')
@@ -32,10 +26,10 @@ def register():
         if request.form.get('login_or_signup') == 'signup': #signup
             user = UserDB.query.filter_by(email=email).first()
             if user is not None:
-                return "email already exists.. pls no"
+                return "email already exists."
             user = UserDB.query.filter_by(username=username).first()
             if user is not None:
-                return "username is already taken. pls die"
+                return "username is already taken."
             user = UserDB(email=email, username=username, pass_hash=password)
             db.session.add(user)
             db.session.commit()
@@ -53,7 +47,7 @@ def register():
             return redirect(url_for('home'))
 
 
-@app.route('/tags/<tag_name>')
+@app.route('/games/<tag_name>')
 def tag(tag_name):
     tag = TagDB.query.filter_by(name=tag_name).first()
     if tag is None:

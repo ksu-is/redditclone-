@@ -1,11 +1,8 @@
 body{
-  background: url("https://s-media-cache-ak0.pinimg.com/564x/a5/4b/2e/a54b2e10bdc0c85edb141359858a16a1.jpg") 0 0 no-repeat fixed;
-  background-size: 20%;
-  background-position: right bottom;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(40, 40, 40, 0.5);
 }
 
-.posts{
+/*.posts{
   border-bottom: 1px black solid;
   height: 100px;
 }
@@ -43,3 +40,4 @@ body{
 .btn-secondary:hover{
   background-color: #756C6C !important;
 }
+*/

@@ -11,9 +11,18 @@
   {% if current_user.is_authenticated %}
     <form action = "{{ url_for('write') }}" name="write" method="POST">
       <div class="form-group">
-        <label for="usr">Tag:</label>
-        <input name="tag" type="text" class="form-control" placeholder="Tag">
+        <label for="usr">Game:</label>
+        <!-- <input name="tag" type="text" class="form-control" placeholder="Game"> -->
       </div>
+      <select name="tag" class="form-control">
+        <option value="" disabled selected>Select Game</option>
+        <option value="Fortnite">Fortnite</option>
+        <option value="Overwatch">Overwatch</option>
+        <option value="Rainbow6">Rainbow 6 Siege</option>
+        <option value="CSGO">CS:GO</option>
+        <option value="League">League of Legends</option>
+        <option value="Dota2">Dota 2</option>
+      </select>
       <br>
       <div class="form-group">
         <label for="usr">Title:</label>
@@ -25,7 +34,7 @@
         <textarea name="content" class="form-control" row="10" placeholder="Content" type="text"></textarea>
       </div>
         <br>
-      <button type="submit" class="btn btn-secondary" >Submit Post</button>
+      <button type="submit" class="btn btn-secondary" style="color:rgb(90, 158, 130);">Submit Post</button>
     </form>
     <br>
   {% else %}

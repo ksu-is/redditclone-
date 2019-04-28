@@ -8,7 +8,7 @@
 {% block content %}
 
   <!-- Printing top 50 posts -->
-  {% if posts is not none and front%}
+  <!-- {% if posts is not none and front%}
     {% for post in posts %}
       <div class="row">
         <div class="col-md-1">
@@ -21,14 +21,51 @@
           <h3 style="font-size: 15px;">Submitted by 
             <a href="/users/{{post.author}}">{{ post.author }}</a>  
             to 
-            <a href="/tags/{{ TagDB.query.filter_by(id=PostTagDB.query.filter_by(post_id=post.id).first().tag_id).first().name }}">/tags/{{ TagDB.query.filter_by(id=PostTagDB.query.filter_by(post_id=post.id).first().tag_id).first().name }}</a> 
+            <a href="/games/{{ TagDB.query.filter_by(id=PostTagDB.query.filter_by(post_id=post.id).first().tag_id).first().name }}">/games/{{ TagDB.query.filter_by(id=PostTagDB.query.filter_by(post_id=post.id).first().tag_id).first().name }}</a> 
           </h3>
         </div>
       </div>
     {% endfor %}
   {% else %}
     <h2>There are currently no posts! Please <a href="{{ url_for('write') }}">Submit a post</a><h2>
-  {% endif %}
+  {% endif %} -->
 
+  <table style="width:100%">
+    <tr>
+      <td align="center">
+        <a href="/games/Fortnite">
+          <img style="cursor:pointer" src="../static/img/FN2.png">
+        </a>
+      </td>
+      <td align="center">
+        <a href="/games/Overwatch">
+          <img style="cursor:pointer" src="../static/img/OW2.png">
+        </a>
+      </td>
+      <td align="center">
+        <a href="/games/Rainbow6">
+          <img style="cursor:pointer" src="../static/img/Rs62.png">
+        </a>
+      </td>
+    </tr>
+    <tr><td height="30px"></td></tr>
+    <tr>
+      <td align="center">
+        <a href="/games/CSGO">
+          <img style="cursor:pointer" src="../static/img/CSGO2.png">
+        </a>
+      </td>
+      <td align="center">
+        <a href="/games/League">
+          <img style="cursor:pointer" src="../static/img/LoL2.png">
+        </a>
+      </td>
+      <td align="center">
+        <a href="/games/Dota2">
+          <img style="cursor:pointer" src="../static/img/Dota2.png">
+        </a>
+      </td>
+    </tr>
+  </table>
 {% endblock %}
   
