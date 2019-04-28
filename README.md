@@ -26,4 +26,5 @@ mysql> grant all privileges on reddit.* to 'reddit'@'localhost';
 
 (venv) $ ./migrate.py db upgrade
 
-Step 3. Run the server. 
+# Step 3. Run the server. 
+$ ./run.py
